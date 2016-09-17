@@ -1,0 +1,23 @@
+JS
+Variable: 
+1. Local variable:
+- Template: _variableName
+2. Global variable:
+- Template: variableName
+Function:
+1. Local variable: 
+- Template: _functionName
+2. Global function:
+- Template: functionName
+---------------------------------------------
+HTML
+1. Class
+- Template: class-name
+2. Id
+- Template: id_name
+3. Name
+- Template: element-name
+---------------------------------------------
+FILE
+1. File name
+- Template: file-name.extend
