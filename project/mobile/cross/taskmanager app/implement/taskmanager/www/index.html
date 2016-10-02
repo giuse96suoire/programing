@@ -32,10 +32,178 @@
 
   <!-- your app's js -->
   <script src="js/app.js"></script>
+
+  <!-- Controller js -->
+  <script src="js/controller/login-controller.js"></script>
+  <script src="js/controller/project-controller.js"></script>
+  <script src="js/controller/project-detail-controller.js"></script>
+  <script src="js/controller/remind-controller.js"></script>
+  <script src="js/controller/search-controller.js"></script>
+
+  <!-- Service js -->
+
+
+
 </head>
 
-<body ng-app="TaskmanagerApp">
+<body ng-app="TaskManagerApp">
   <ion-nav-view name="main-view">
+    <ion-view ion-title='Menu'>
+      <ion-side-menus>
+        <!-- Left menu -->
+        <ion-side-menu side="left">
+          <ion-content>
+            <ion-list>
+              <ion-item class="link item item-thumbnail-left">
+                <img ng-src="" />
+                <h2>Manh Hoang Huynh </h2>
+                <p class="ion-android-call"> Tel: 0988247131</p>
+                <p class="ion-happy"> Love: 150</p>
+                <p class="ion-sad-outline"> Hate: 150</p>
+              </ion-item>
+              <a class="item ion-ios-plus-outline">
+                <b>Create new project</b>
+              </a>
+              <ion-item class="item-divider ion-ios-list-outline"> Statistic </ion-item>
+              <a class="item ion-document-text">   All project: 100      </a>
+              <a class="item ion-document">      Own project: 100     </a>
+              <a class="item ion-checkmark">Complete project: 100    </a>
+              <a class="item ion-close-round">Fail project: 100  </a>
+              <ion-item class="item-divider ion-earth">
+                Social
+              </ion-item>
+              <a class="item ion-person-stalker">
+          Friend: 150
+      </a>
+              <ion-item class="item-divider ion-settings">
+                System
+              </ion-item>
+              <a class="item ion-gear-a">
+        Setting
+      </a>
+              <a class="item  ion-power">
+          Logout
+      </a>
+            </ion-list>
+          </ion-content>
+        </ion-side-menu>
+        <!-- Home panel -->
+        <ion-side-menu-content>
+
+          <ion-tabs class="tabs-positive tabs-icon-top">
+
+            <ion-tab title="Remind" icon-on="ion-alert" icon-off="ion-alert-circled" href="#/remind">
+              <ion-nav-view name="remind-view"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Project" icon-on="ion-ios-paper" icon-off="ion-ios-paper-outline" href="#/project">
+              <ion-nav-view name="project-view"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Chat" icon-on="ion-ios-chatboxesr" icon-off="ion-ios-chatboxes-outline" href="#/chat">
+              <ion-nav-view name="chat-view"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Search" icon-on="ion-ios-search" icon-off="ion-ios-search-strong" href="#/search">
+              <ion-nav-view name="search-view"></ion-nav-view>
+            </ion-tab>
+
+          </ion-tabs>
+        </ion-side-menu-content>
+        <!-- Right menu -->
+        <ion-side-menu side="right">
+          <ion-content>
+            <ion-list>
+              <ion-item class="item-divider ion-person">
+                Account Setting
+              </ion-item>
+
+              <li class="item item-toggle ion-person-add">
+                Auto accept friend
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+
+              <li class="item item-toggle ion-document-text">
+                Auto accept project
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+
+              <li class="item item-toggle ion-ios-world-outline">
+                Public profile
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+
+
+
+              <ion-item class="item-divider ion-earth">
+                System Setting
+              </ion-item>
+
+              <li class="item item-toggle ion-android-chat">
+                Notify new message
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+
+              <li class="item item-toggle ion-android-attach">
+                Notify new task
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+              <li class="item item-toggle ion-volume-high">
+                Sound
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+              <li class="item item-toggle ion-android-sync">
+                Auto login
+                <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+              </li>
+
+
+            </ion-list>
+          </ion-content>
+        </ion-side-menu>
+      </ion-side-menus>
+    </ion-view>
   </ion-nav-view>
 </body>
 
